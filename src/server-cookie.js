@@ -22,6 +22,7 @@ app.get('/jwt', (req, res) => {
   res.cookie('token', token, {
     maxAge: 86400,
     httpOnly: true,
+    secure: true,
   });
 
   res.json({ token });
